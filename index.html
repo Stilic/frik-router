@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Frik Router</title>
+    <meta name="description" href="A pure vanilla JS SPA router." />
+    <meta property="og:title" content="Frik Router" />
+    <meta property="og:description" content="A pure vanilla JS SPA router." />
+    <meta property="og:url" content="https://frik-router.glitch.me/" />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/default.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <p>
+        Frik Router
+      </p>
+      <nav>
+        <button data-href="/">
+          <span class="material-icons">
+            home
+          </span>
+          Home
+        </button>
+        <button data-href="/get-started">
+          <span class="material-icons"> play_arrow </span>Get started
+        </button>
+      </nav>
+    </header>
+    <main>
+      <div id="frik-main">
+        <noscript
+          >Javascript is need to be enabled for view this page.</noscript
+        >
+      </div>
+      <footer>
+        <p>Created by <a href="https://glitch.com/@Stylix58">Stylix58</a>!</p>
+      </footer>
+    </main>
+    <script src="frik.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
+    <script>
+      let router = new Frik({
+        title: document.title,
+        afterRender: hljs.highlightAll
+      });
+      router.init();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

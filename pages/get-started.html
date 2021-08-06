@@ -1,0 +1,76 @@
+<script>
+  document.title = "Get started - " + document.title;
+</script>
+<h1>
+  Get started
+</h1>
+<h2>
+  Installation
+</h2>
+<ol>
+  <li>
+    Add the following code at the end of your HTML <code>body</code> tag:
+    <pre><code>
+  <script src="https://frik-router.glitch.me/frik.js"></script>
+  <script>
+    let router = new Frik({
+          title: document.title
+        });
+    router.init();
+  </script>
+  </code></pre>
+  </li>
+
+  <li>
+    Place a div with the <code>frik-main</code> ID (you can include HTML code
+    before and after this <code>div</code> for apply it on all pages):
+    <pre><code><div id="frik-main"><noscript>Javascript is need to be enabled for view this page.</noscript></div></code></pre>
+  </li>
+
+  <li>
+    Create some HTML pages in a subdir <code>pages</code> in the dir of your
+    main HTML code. They need to follow this structure:
+    <pre><code class="nohighlight">
+    - index.html
+      - /pages
+      - main.html (the default page, who is diplayed as the homepage)
+      - random_page.html (you can create a infinite number of these pages if you want!)
+    </code></pre>
+  </li>
+
+  <li>
+    For make a link, just add the following in a <code>a</code> or
+    <code>button</code> tag:
+    <pre><code class="nohighlight">
+    data-href="/**the path to your html page, without the *pages* at the start**"
+    </code></pre>
+  </li>
+</ol>
+<h2>
+  Options
+</h2>
+<p>
+  You can pass optionnals options to <code>Frik</code> object initiator for
+  customize the router:
+</p>
+<table>
+  <tbody>
+    <tr>
+      <td><code>afterRender</code></td>
+      <td>
+        The function to call after render of a page (to write without the
+        <code>()</code> at the end)
+      </td>
+    </tr>
+    <tr>
+      <td><code>afterRender-args</code></td>
+      <td>
+        The args to pass to the function of <code>afterRender</code> option
+      </td>
+    </tr>
+    <tr>
+      <td><code>loadingHTML</code></td>
+      <td>Custom HTML to use instead of <code>Loading...</code> text</td>
+    </tr>
+  </tbody>
+</table>
