@@ -1,0 +1,176 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --spinner: blue;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+button:focus,
+a:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: solid blue 1px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+code,
+table,
+li {
+  margin-bottom: 0.5em;
+}
+h1 {
+  font-size: 36px;
+  display: inline-block;
+  border-bottom: 2px solid black;
+  line-height: 40px;
+}
+h2 {
+  font-size: 30px;
+  line-height: 40px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 40px;
+}
+h4 {
+  font-size: 18px;
+  line-height: 20px;
+}
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+h6 {
+  font-size: 12px;
+  line-height: 20px;
+}
+p {
+  margin-bottom: 1em;
+}
+a {
+  color: blue;
+}
+ol,
+ul {
+  margin-left: 0;
+  padding-left: 1em;
+}
+ul {
+  list-style: inside;
+}
+pre {
+  overflow: auto;
+  margin: 1em;
+}
+code {
+  border-radius: 15px;
+}
+
+table,
+td {
+  border: 1px solid #333;
+  padding: 0.5em;
+}
+thead,
+tfoot {
+  background-color: #333;
+  color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  background-color: white;
+  display: flex;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+header p {
+  padding: 0 1.5em 0 1.5em;
+  position: relative;
+  top: 0.75em;
+  font-size: 15px;
+  user-select: none;
+}
+
+nav {
+  font-size: 0;
+}
+nav button,
+img {
+  user-select: none;
+  cursor: pointer;
+  padding: 0.75em 1em 0 1em;
+  background-color: transparent;
+  text-align: center;
+  font-size: 15px;
+  border: 0;
+  padding-bottom: calc(0.7em + 3px);
+  transition: background 0.2s ease;
+}
+nav button:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+nav button .material-icons {
+  font-size: inherit;
+  position: relative;
+  top: 3px;
+}
+nav button:not(:first-child) .material-icons {
+  padding-right: 0.25em;
+}
+nav button.active {
+  padding-bottom: 0.7em;
+  cursor: inherit;
+  background-color: transparent;
+  color: rgb(0, 7, 201);
+  border-bottom: solid rgb(0, 5, 135) 3px;
+}
+
+button:not(nav button),
+.btn {
+  border: none;
+  cursor: pointer;
+  background-color: #1976d2;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem;
+  margin: 0.5em;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.5);
+  font-size: 17px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:not(nav button):hover,
+button:not(nav button):focus,
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+main {
+  margin: 1em;
+  margin-top: 3.5em;
+}
+
+footer {
+  margin-top: 1.5em;
+  padding-top: 1em;
+  border-top: solid 2px black;
+}
